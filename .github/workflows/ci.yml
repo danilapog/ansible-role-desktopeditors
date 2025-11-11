@@ -69,7 +69,7 @@ jobs:
       - name: Run Molecule tests.
         run: |
           sed -i 's/ONLYOFFICE/onlyoffice/g' meta/main.yml
-          molecule test --scenario-name default -- --vvv
+          molecule test --scenario-name default
         env:
           MOLECULE_DEBUG: '1'
           ANSIBLE_VERBOSITY: '3'
