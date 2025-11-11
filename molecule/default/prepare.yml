@@ -4,6 +4,10 @@
   become: true
   gather_facts: true
   tasks:
+  - name: Update APT cache
+      apt:
+        update_cache: yes
+        
   - name: Install dirmngr on deb
     apt: 
       name: "dirmngr"
@@ -12,3 +16,4 @@
     when: ansible_os_family == "Debian"
     changed_when: false
     failed_when: false
+    
