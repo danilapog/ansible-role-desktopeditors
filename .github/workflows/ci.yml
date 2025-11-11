@@ -64,7 +64,8 @@ jobs:
           pip3 install molecule-plugins[docker]
           pip3 install molecule-plugins[lint]
           pip3 install docker
-
+          pip install --upgrade "ansible-core>=2.20.0"
+          
       - name: Run Molecule tests.
         run: |
           sed -i 's/ONLYOFFICE/onlyoffice/g' meta/main.yml
