@@ -3,14 +3,7 @@
   remote_user: root
   become: true
   gather_facts: true
-  tasks:
-  - name: Fix APT sources for Ubuntu 20.04
-    when: ansible_distribution == "Ubuntu" and ansible_distribution_version is version('20.04', '==')
-    replace:
-      path: /etc/apt/sources.list
-      regexp: 'http://archive.ubuntu.com/ubuntu/?'
-      replace: 'http://old-releases.ubuntu.com/ubuntu'
-        
+  tasks:      
   - name: Install dirmngr on deb
     apt: 
       name: "dirmngr"
