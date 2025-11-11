@@ -69,7 +69,7 @@ jobs:
       - name: Run Molecule tests.
         run: |
           sed -i 's/ONLYOFFICE/onlyoffice/g' meta/main.yml
-          molecule test --scenario-name default
+          molecule test --debug --scenario-name default
         env:
           PY_COLORS: '1'
           ANSIBLE_FORCE_COLOR: '1'
