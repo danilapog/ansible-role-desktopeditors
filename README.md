@@ -4,7 +4,8 @@
 
 ## Overview
 
-**Ansible Role** is a set of tasks to configure a host to serve a certain purpose like configuring a service.
+**Ansible Role** is a set of tasks to configure 
+a host to serve a certain purpose like configuring a service.
 A role structure contains such directories as defaults, vars, tasks, files, templates, meta, handlers.
 Ansible Role has to be used within **Playbook** that serves as a mapping between hosts and roles.
 
